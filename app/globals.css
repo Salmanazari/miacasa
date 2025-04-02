@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 158 65% 19%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 46 57% 52%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 46 57% 52%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 93%;
+    --input: 0 0% 93%;
+    --ring: 158 65% 19%;
+    --radius: 1.25rem;
+  }
+
+  .dark {
+    --background: 158 65% 10%;
+    --foreground: 0 0% 98%;
+    --card: 158 65% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 158 65% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 158 65% 19%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 46 57% 52%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 46 57% 52%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 46 57% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-primary-foreground rounded-xl px-6 py-3 font-semibold transition-all duration-300 hover:bg-primary/90 hover:scale-[1.03];
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground rounded-xl px-6 py-3 font-semibold transition-all duration-300 hover:bg-secondary/90 hover:scale-[1.03];
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-card-hover hover:scale-[1.02];
+  }
+
+  .gold-shine {
+    @apply bg-gold-gradient bg-[length:200%_100%] animate-shimmer;
+  }
+
+  .gold-text {
+    @apply text-secondary font-semibold;
+  }
+
+  .gold-border {
+    @apply border-secondary;
+  }
+
+  .gold-accent {
+    @apply relative;
+  }
+
+  .gold-accent::after {
+    @apply content-[''] absolute block w-16 h-1 bg-secondary rounded-full mt-2 bottom-[-8px] left-0;
+  }
+}
+
