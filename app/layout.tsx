@@ -22,10 +22,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="light">
-          <div className="flex min-h-screen flex-col">
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} min-h-screen bg-background text-foreground antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <div className="relative flex min-h-screen flex-col">
             <Header />
             <ScrollToTop />
             <main className="flex-1">{children}</main>

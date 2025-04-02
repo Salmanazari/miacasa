@@ -8,6 +8,8 @@ import { supabase } from "@/lib/supabase"
 import GuideCard from "@/components/guide-card"
 import { BookOpen, Search } from "lucide-react"
 
+export const dynamic = 'force-dynamic'
+
 export default async function GuidesPage({
   searchParams,
 }: {

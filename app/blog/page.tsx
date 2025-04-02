@@ -6,6 +6,8 @@ import { supabase } from "@/lib/supabase"
 import BlogCard from "@/components/blog-card"
 import { BookOpen } from "lucide-react"
 
+export const dynamic = 'force-dynamic'
+
 export default async function BlogPage({
   searchParams,
 }: {
